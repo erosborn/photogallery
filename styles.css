@@ -62,14 +62,23 @@ table {
 /* global/mobile */
 body{
     min-width: 485px;
+    background-color: var(--black);
+}
+
+main{
+    background-color: var(--white);
+    width: 80%;
 }
 
 h1{
     font-size: 3em;
+    color: var(--teal);
+    font-weight: bold;
 }
 
 h2{
     font-size: 2em;
+    font-weight: bold;
 }
 
 p{
@@ -79,6 +88,9 @@ p{
 nav a{
     font-size: 1.5em;
     text-decoration: none;
+    background-color: var(--black);
+    color: var(--white);
+    font-weight: bold;
 }
 
 figcaption, label, input, small {
