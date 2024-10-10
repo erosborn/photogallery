@@ -67,7 +67,8 @@ body{
 
 main{
     background-color: var(--white);
-    width: 80%;
+    padding: 1em;
+    margin: 0 auto;
 }
 
 h1{
@@ -101,11 +102,15 @@ h1, h2, nav a, figcaption, label, input, small, footer{
     text-transform: uppercase;
 }
 /* medium */
-body{
-    min-width: 880px;
+@media screen and (min-width: 880px){
+    body{
+        min-width: 880px;
+    }
 }
 
 /* large */
-body{
-    min-width: 1300px;
+@media screen and (min-width: 1300px){
+    body{
+        min-width: 1300px;
+    }
 }
