@@ -60,13 +60,13 @@ table {
 }
 
 /* global/mobile */
-body{
-    min-width: 485px;
+html{
     background-color: var(--black);
 }
 
-main{
-    max-width: 80%;
+body{
+    min-width: 485px;
+    width: 80%;
     margin: 0 auto;
 }
 
@@ -91,7 +91,6 @@ p{
 
 header{
     margin: 0 auto;
-    max-width: 80%;
     background: var(--white);
     padding: 15px;
 }
@@ -242,6 +241,10 @@ footer{
 @media screen and (min-width: 1300px){
     body{
         min-width: 1300px;
+    }
+
+    nav{
+        margin-right: 1em;
     }
 
     #photos{
