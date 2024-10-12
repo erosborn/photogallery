@@ -66,8 +66,7 @@ body{
 }
 
 main{
-    background-color: var(--white);
-    padding: 1em;
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -80,18 +79,50 @@ h1{
 h2{
     font-size: 2em;
     font-weight: bold;
+    text-align: center;
+    padding: 15px 0;
 }
 
 p{
     font-size: 1.25em;
+    line-height: 1.5em;
+    padding: 10px 0;
 }
 
+header{
+    margin: 0 auto;
+    max-width: 80%;
+    background: var(--white);
+    padding: 15px;
+}
+
+nav {
+    padding: 50px 0;
+    text-align: center;
+    width: 485px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr;
+}
 nav a{
     font-size: 1.5em;
     text-decoration: none;
     background-color: var(--black);
     color: var(--white);
     font-weight: bold;
+}
+
+#top{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    padding: 0.33em;
+    border: solid 3px var(--white);
 }
 
 figcaption, label, input, small {
@@ -101,10 +132,109 @@ figcaption, label, input, small {
 h1, h2, nav a, figcaption, label, input, small, footer{
     text-transform: uppercase;
 }
+
+#about, #gallery{
+    background-color: var(--white);
+    padding: 15px;
+}
+
+figure{
+    position: relative;
+    display: grid;
+    padding: 0.5em 1.25em;
+}
+
+figure img{
+    width: 100%;
+    height: auto;
+}
+
+figcaption{
+    position: absolute;
+    grid-area: 1 / 1;
+    text-align: center;
+    z-index: 1;
+    width: calc(100% - 2em);
+    box-sizing: border-box;
+}
+
+#chile, #hawaii, #italy, #moab{
+    bottom: 1.25em;
+}
+
+#guatemala, #iran, #ireland, #rocky-mtn, #switzerland, #uk, #usa, #wyoming{
+    top: 1em;
+}
+
+figcaption.dark-text{
+    color: var(--black);
+}
+
+figcaption.light-text{
+    color: var(--white);
+}
+
+#contact {
+    color: var(--white);
+    padding: 0 1.5em;
+}
+
+#contact h2, #contact p{
+    text-align: center;
+}
+
+input, label{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="text"]{
+    color: var(--teal);
+    font-weight: bold;
+    padding: 0.75em;
+}
+
+label{
+    padding-top: 1.5em;
+    padding-left: .75em;
+}
+
+input[type="submit"]{
+    background-color: var(--teal);
+    color: var(--white);
+    font-weight: bold;
+    margin: 1.5em auto;
+    padding: 15px;
+    border-radius: 20px;
+    width: 60%;
+}
+
+footer{
+    color: var(--white);
+    text-align: center;
+}
+
 /* medium */
 @media screen and (min-width: 880px){
     body{
         min-width: 880px;
+    }
+
+    #photos{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5em;
+        padding-bottom: 15px;
+    }
+    
+    figure{
+        padding: 0;
+    }
+
+    #contact {
+        width: 85%;
+        margin: 0 auto;
     }
 }
 
@@ -112,5 +242,17 @@ h1, h2, nav a, figcaption, label, input, small, footer{
 @media screen and (min-width: 1300px){
     body{
         min-width: 1300px;
+    }
+
+    #photos{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1em;
+        padding-bottom: 15px;
+    }
+    
+    #contact{
+        width: 75%;
+        margin: 0 auto;
     }
 }
